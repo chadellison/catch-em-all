@@ -13,4 +13,8 @@ class Backpack
   def total
     contents.values.sum
   end
+
+  def count_of(pokemon_id)
+    contents[pokemon_id.to_s]
+  end
 end

@@ -21,4 +21,10 @@ class BackpackTest < ActiveSupport::TestCase
 
     assert_equal 7, backpack.total
   end
+
+  test "returns total number of a specific pokemon in our backpack" do
+    backpack = Backpack.new({"1" => 3, "2" => 1, "3" => 3})
+
+    assert_equal 3, backpack.count_of(3)
+  end
 end

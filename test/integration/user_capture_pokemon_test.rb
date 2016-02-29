@@ -13,6 +13,9 @@ class UserCapturePokemonTest < ActionDispatch::IntegrationTest
     assert page.has_content?("You now have 1 Pikachu.")
     assert page.has_content?("Backpack: 1")
 
+    click_button "Capture"
+    assert page.has_content?("You now have 2 Pikachus.")
+    assert page.has_content?("Backpack: 2")
 
   end
 end
